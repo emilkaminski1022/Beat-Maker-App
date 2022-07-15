@@ -18,9 +18,9 @@ class DrumKit {
   repeat() {
     let step = this.index % 8;
     const activeBars = document.querySelectorAll(`.b${step}`);
-    activeBars.forEach(bar=>{
-        bar.style.animate = ``
-    })
+    activeBars.forEach((bar) => {
+      bar.style.animate = `playTrack 0.3s alternate ease-in-out 2`;
+    });
     this.index++;
   }
 
@@ -34,6 +34,9 @@ class DrumKit {
 
 drumKit.pads.forEach((pad) => {
   pad.addEventListener("click", drumKit.activePad);
+  pad.addEventListener("animationend", function () {
+    this.style.animation = "";
+  });
 });
 
 const drumKit = new DrumKit();
