@@ -118,14 +118,20 @@ select {
     font-size: 1rem;
     border-radius: 5px;
     border: none;
-    outline:4px solid rgb(207, 242, 247);
+    outline: 4px solid rgb(207, 242, 247);
 }
 
 @keyframes playTrack {
     from {
-      transform: scale(1);
+        transform: scale(1);
     }
+
     to {
-      transform: scale(1.2);
+        transform: scale(1.2);
     }
-  }
+}
+
+
+.mute.active {
+    background: rgb(182, 182, 182);
+}
