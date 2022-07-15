@@ -18,6 +18,9 @@ class DrumKit {
   repeat() {
     let step = this.index % 8;
     const activeBars = document.querySelectorAll(`.b${step}`);
+    activeBars.forEach(bar=>{
+        bar.style.animate = ``
+    })
     this.index++;
   }
 
